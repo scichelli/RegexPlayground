@@ -1,0 +1,6 @@
+# ReSharper meta directory
+_Resharper*
+
+# Build Folders
+bin
+obj
