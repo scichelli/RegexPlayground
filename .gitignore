@@ -1,6 +1,10 @@
 # ReSharper meta directory
-_Resharper*
+_Resharper.*
+*.resharper.user
 
 # Build Folders
-bin
-obj
+RegexKata/bin
+RegexKata/obj
+
+# Visual Studio artifacts
+*.suo
