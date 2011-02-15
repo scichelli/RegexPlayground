@@ -1,5 +1,5 @@
 # ReSharper meta directory
-_Resharper.*
+_ReSharper.*
 *.resharper.user
 
 # Build Folders
