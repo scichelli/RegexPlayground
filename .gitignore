@@ -8,3 +8,6 @@ RegexKata/obj
 
 # Visual Studio artifacts
 *.suo
+
+# Local notes
+notesToSelf.txt
