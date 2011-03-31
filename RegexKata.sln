@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexKata", "RegexKata\RegexKata.csproj", "{C4AAABA2-9DCD-49FE-A278-4E340713436E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexKata.Tests", "RegexKata.Tests\RegexKata.Tests.csproj", "{C74A082B-0214-47BF-90CE-E5B0EEB8C010}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexKata.Core", "RegexKata.Core\RegexKata.Core.csproj", "{1E0575EC-8D96-4BA2-A13A-5B0796869759}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{C4AAABA2-9DCD-49FE-A278-4E340713436E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4AAABA2-9DCD-49FE-A278-4E340713436E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4AAABA2-9DCD-49FE-A278-4E340713436E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C74A082B-0214-47BF-90CE-E5B0EEB8C010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C74A082B-0214-47BF-90CE-E5B0EEB8C010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C74A082B-0214-47BF-90CE-E5B0EEB8C010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C74A082B-0214-47BF-90CE-E5B0EEB8C010}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E0575EC-8D96-4BA2-A13A-5B0796869759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E0575EC-8D96-4BA2-A13A-5B0796869759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E0575EC-8D96-4BA2-A13A-5B0796869759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E0575EC-8D96-4BA2-A13A-5B0796869759}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
