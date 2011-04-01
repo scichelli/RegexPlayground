@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexKata", "RegexKata\RegexKata.csproj", "{C4AAABA2-9DCD-49FE-A278-4E340713436E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexKata.Tests", "RegexKata.Tests\RegexKata.Tests.csproj", "{C74A082B-0214-47BF-90CE-E5B0EEB8C010}"

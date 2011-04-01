@@ -8,6 +8,13 @@ RegexKata*/obj
 
 # Visual Studio artifacts
 *.suo
+*.user
 
 # Local notes
 notesToSelf.txt
+
+# Extra stuff that came with the nunit nuget package
+packages/NUnit.2.5.9.10348/Tools
+packages/NUnit.2.5.9.10348/NUnitFitTests.html
+packages/NUnit.2.5.9.10348/Logo.ico
+packages/NUnit.2.5.9.10348/license.txt
