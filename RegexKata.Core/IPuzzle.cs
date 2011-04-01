@@ -2,8 +2,8 @@ using System.Collections.Generic;
 
 namespace RegexKata.Core
 {
-	public interface IKata
+	public interface IPuzzle
 	{
-		IEnumerable<Exercise> Exercises { get; }
+		IEnumerable<Riddle> Riddles { get; }
 	}
 }

@@ -1,13 +1,13 @@
 namespace RegexKata.Core
 {
-	public class TestCase
+	public class Clue
 	{
-		public string Input { get; private set; }
+		public string Prompt { get; private set; }
 		public bool ShouldMatch { get; private set; }
 
-		public TestCase(string input, bool shouldMatch)
+		public Clue(string input, bool shouldMatch)
 		{
-			Input = input;
+			Prompt = input;
 			ShouldMatch = shouldMatch;
 		}
 
@@ -15,22 +15,22 @@ namespace RegexKata.Core
 		{
 			if (ReferenceEquals(null, obj)) return false;
 			if (ReferenceEquals(this, obj)) return true;
-			if (obj.GetType() != typeof (TestCase)) return false;
-			return Equals((TestCase) obj);
+			if (obj.GetType() != typeof (Clue)) return false;
+			return Equals((Clue) obj);
 		}
 
-		public bool Equals(TestCase other)
+		public bool Equals(Clue other)
 		{
 			if (ReferenceEquals(null, other)) return false;
 			if (ReferenceEquals(this, other)) return true;
-			return Equals(other.Input, Input) && other.ShouldMatch.Equals(ShouldMatch);
+			return Equals(other.Prompt, Prompt) && other.ShouldMatch.Equals(ShouldMatch);
 		}
 
 		public override int GetHashCode()
 		{
 			unchecked
 			{
-				return ((Input != null ? Input.GetHashCode() : 0)*397) ^ ShouldMatch.GetHashCode();
+				return ((Prompt != null ? Prompt.GetHashCode() : 0)*397) ^ ShouldMatch.GetHashCode();
 			}
 		}
 	}
