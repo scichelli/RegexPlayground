@@ -1,3 +1,1 @@
-This collection of katas provides exercises for practicing regular expressions.
-
-Each kata is an NUnit test fixture containing parameterized tests. Complete each exercise by defining a pattern that passes all of its TestCases. You might also need to supply RegexOptions to the Regex constructor.
+The goal remains getting fluent in Regular Expressions. This project started as a collection of unit tests as katas, but is quickly evolving into something much more fun.

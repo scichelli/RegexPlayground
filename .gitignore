@@ -3,8 +3,8 @@ _ReSharper.*
 *.resharper.user
 
 # Build Folders
-RegexKata/bin
-RegexKata/obj
+RegexKata*/bin
+RegexKata*/obj
 
 # Visual Studio artifacts
 *.suo
