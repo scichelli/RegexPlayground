@@ -66,3 +66,17 @@ textarea
 {
     display: none;
 }
+
+/* Project-specific styles
+-----------------------------------------------------------*/
+table.riddle td
+{
+    border: 1px solid gray;
+    margin: 0;
+    padding: 3px;
+}
+
+table.riddle 
+{
+    border-collapse: collapse;
+}

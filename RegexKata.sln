@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexKata.Core", "RegexKata
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexKata.UI", "RegexKata.UI\RegexKata.UI.csproj", "{7BC0FBA7-ADBA-4013-AAF5-171B13CFCB7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexKata.Infrastructure", "RegexKata.Infrastructure\RegexKata.Infrastructure.csproj", "{8AD93CE3-8E0C-48C9-A993-D66FF2023D77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{7BC0FBA7-ADBA-4013-AAF5-171B13CFCB7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BC0FBA7-ADBA-4013-AAF5-171B13CFCB7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BC0FBA7-ADBA-4013-AAF5-171B13CFCB7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD93CE3-8E0C-48C9-A993-D66FF2023D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD93CE3-8E0C-48C9-A993-D66FF2023D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD93CE3-8E0C-48C9-A993-D66FF2023D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD93CE3-8E0C-48C9-A993-D66FF2023D77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

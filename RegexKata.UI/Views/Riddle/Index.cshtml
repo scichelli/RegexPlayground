@@ -1,0 +1,37 @@
+﻿@model RegexKata.Core.Riddle
+
+@{
+    ViewBag.Title = "Play";
+}
+<table class="riddle">
+    @{
+     int i = 0;   
+    }
+    @foreach (var clue in Model.Clues)
+    {
+        <tr>
+            <td>
+                @if (clue.ShouldMatch)
+                {
+                    @:*
+                }
+                else
+                {
+                    @:&nbsp;
+                }
+            </td>
+            <td>@clue.Prompt</td>
+            <td id="@i"></td>
+            @{
+                i++;
+            }
+        </tr>
+    }
+    <tr>
+        <td colspan="3">
+            <input type="text" id="pattern" />
+        </td>
+    </tr>
+</table>
+    
+

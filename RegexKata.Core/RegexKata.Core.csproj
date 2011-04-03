@@ -66,9 +66,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IRiddleRepository.cs" />
     <Compile Include="Riddle.cs" />
     <Compile Include="RiddleResult.cs" />
-    <Compile Include="IPuzzle.cs" />
+    <Compile Include="Puzzle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clue.cs" />
   </ItemGroup>
