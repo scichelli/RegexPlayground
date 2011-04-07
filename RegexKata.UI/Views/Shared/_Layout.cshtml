@@ -1,12 +1,48 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!doctype html>
+<html lang="en">
+
 <head>
-    <title>RegEx Playground|@ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+	<meta charset="utf-8">
+	
+	<title>RegEx Playground|@ViewBag.Title</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link rel="stylesheet" href="@Url.Content("~/css/riddles.css")">
+	<script src="@Url.Content("~/js/modernizr-1.7.min.js")"></script>
 </head>
 
 <body>
-    @RenderBody()
+
+	<header>
+		<h1>Regex Riddles</h1>
+		<nav>
+			<ul>
+				<li><a href="@Url.Action("Index", "Riddle")">Play</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="content">
+		@RenderBody()
+	</div>
+
+	<script src="@Url.Content("~/js/yepnope.1.0.1-min.js")"></script>
+	<script>
+
+		yepnope([{
+			load: [
+				'http://code.jquery.com/jquery-1.5.2.min.js'
+			],
+			complete: function() {
+				$(function() {
+					
+				});
+			}
+		}]);
+
+	</script>
+
 </body>
+
 </html>
