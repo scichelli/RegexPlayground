@@ -1,0 +1,22 @@
+@model RegexKata.Core.Riddle
+
+<div class="riddleContainer">
+	<table class="riddle">
+		@{ int i = 0; }
+		@foreach (var clue in Model.Clues) {
+			<tr>
+				<td>
+					@Html.Raw(clue.ShouldMatch ? "*" : "&nbsp;")
+				</td>
+				<td>@clue.Prompt</td>
+				<td class="clueResult" id="@clue.GetHashCode()"></td>
+				@{ i++; }
+			</tr>
+		}
+	</table>
+	<form action="@Url.Action("TestRiddle", "Riddle")" method="post">
+		@Html.HiddenFor(r => r.Id)
+		<label for="pattern"><input id="pattern" name="pattern" placeholder="Type your answer here" type="text" /></label>
+		<button><span class="btn">Check</span></button>
+	</form>
+</div>

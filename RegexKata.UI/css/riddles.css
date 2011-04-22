@@ -39,3 +39,6 @@ table.riddle
 {
     border-collapse: collapse;
 }
+
+td.sad { background: #c00; }
+td.happy { background: #0c0; }

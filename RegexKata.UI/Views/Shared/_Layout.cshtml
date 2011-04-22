@@ -35,9 +35,36 @@
 			load: [
 				'http://code.jquery.com/jquery-1.5.2.min.js'
 			],
-			complete: function() {
-				$(function() {
-					
+			complete: function () {
+				$(function () {
+					$('form').submit(function () {
+						var form = $(this);
+
+						$.ajax({
+							url: form.attr('action'),
+							type: form.attr('method'),
+							data: form.serialize(),
+							success: function (data) {
+								var container = form.parents('.riddleContainer');
+
+								$('.clueResult', container)
+									.removeClass('sad').removeClass('happy');
+
+								var failures = data.FailedResults;
+								var successes = data.SucceededResults;
+
+								for (var failureIndex in failures) {
+									$('#' + failures[failureIndex]).addClass('sad');
+								}
+
+								for (var successIndex in successes) {
+									$('#' + successes[successIndex]).addClass('happy');
+								}
+							}
+						});
+
+						return false;
+					});
 				});
 			}
 		}]);

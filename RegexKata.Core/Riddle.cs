@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -6,6 +7,7 @@ namespace RegexKata.Core
 {
 	public class Riddle
 	{
+		public Guid Id { get; set; }
 		public string Title { get; private set; }
 		public IEnumerable<Clue> Clues { get; private set; }
 
