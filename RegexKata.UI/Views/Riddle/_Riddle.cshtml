@@ -2,21 +2,18 @@
 
 <div class="riddleContainer">
 	<table class="riddle">
-		@{ int i = 0; }
 		@foreach (var clue in Model.Clues) {
 			<tr>
-				<td>
-					@Html.Raw(clue.ShouldMatch ? "*" : "&nbsp;")
-				</td>
+				<td class="icon">@Html.Raw(clue.ShouldMatch ? "<span class=\"icon shouldMatch\"></span>" : "&nbsp;")</td>
 				<td>@clue.Prompt</td>
-				<td class="clueResult" id="@clue.GetHashCode()"></td>
-				@{ i++; }
+				<td class="icon"><span class="icon clueResult result-indeterminate" id="@clue.GetHashCode()"></span></td>
 			</tr>
 		}
 	</table>
 	<form action="@Url.Action("TestRiddle", "Riddle")" method="post">
 		@Html.HiddenFor(r => r.Id)
 		<label for="pattern"><input id="pattern" name="pattern" placeholder="Type your answer here" type="text" /></label>
-		<button><span class="btn">Check</span></button>
+		<button type="submit"><span class="btn">Check</span></button>
 	</form>
+	<ol class="priorPatterns"></ol>
 </div>

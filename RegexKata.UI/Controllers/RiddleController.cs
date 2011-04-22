@@ -10,9 +10,11 @@ namespace RegexKata.UI.Controllers
 	{
 		private readonly IRiddleRepository _riddleRepository;
 
-		public RiddleController()
+		public RiddleController() : this(new RiddleRepository()) {}
+
+		public RiddleController(IRiddleRepository repository)
 		{
-			_riddleRepository = new RiddleRepository();
+			_riddleRepository = repository;
 		}
 
 		public ViewResult Index()

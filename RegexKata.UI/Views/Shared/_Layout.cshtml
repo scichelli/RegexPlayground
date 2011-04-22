@@ -47,24 +47,34 @@
 							success: function (data) {
 								var container = form.parents('.riddleContainer');
 
-								$('.clueResult', container)
-									.removeClass('sad').removeClass('happy');
+								$('.clueResult', container).removeClass('result-success').removeClass('result-failure');
 
 								var failures = data.FailedResults;
 								var successes = data.SucceededResults;
 
+								var successesCount = successes.length;
+								var totalCount = successesCount + failures.length;
+
 								for (var failureIndex in failures) {
-									$('#' + failures[failureIndex]).addClass('sad');
+									$('#' + failures[failureIndex]).addClass('result-failure');
 								}
 
 								for (var successIndex in successes) {
-									$('#' + successes[successIndex]).addClass('happy');
+									$('#' + successes[successIndex]).addClass('result-success');
 								}
+
+								$('.priorPatterns', container).trigger('regexRiddles:addPriorPattern', [$('#pattern').val(), successesCount, totalCount]);
 							}
 						});
 
 						return false;
 					});
+
+					$('.priorPatterns').bind('regexRiddles:addPriorPattern', function (ev, pattern, successes, total) {
+						$('<li>' + pattern + ' (' + successes + ' of ' + total + ')</li>').prependTo($(this));
+					});
+
+					$('#pattern').focus();
 				});
 			}
 		}]);

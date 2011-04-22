@@ -1,4 +1,4 @@
-body { background-image: url(../images/bg.png); }
+body { background-image: url(../images/bg.png); font-family: Garamond, Sans-Serif; }
 button { background:none; border:0; margin:0; padding:0; }
 
 div#content {
@@ -30,15 +30,45 @@ input:-moz-placeholder { color:rgba(255,255,255,0.2); }
 -----------------------------------------------------------*/
 table.riddle td
 {
-    border: 1px solid gray;
+	/* Style */
+    border: 1px dotted gray;
+    color: #eee;
+    
+    /* Layout */
     margin: 0;
     padding: 3px;
+    
+    /* Typography */
+    font-size: 1.4em;
+    text-align: center;
+    vertical-align: middle;
 }
 
 table.riddle 
 {
     border-collapse: collapse;
+    width: 100%;
 }
 
 td.sad { background: #c00; }
 td.happy { background: #0c0; }
+
+td.icon { width: 24px; }
+
+span.icon {
+	display: block;
+	height: 24px;
+	width: 24px;
+	
+	border-radius: 6px;
+}
+
+.shouldMatch {
+	background: #0c0;
+}
+
+.result-indeterminate { background: #555; }
+.result-success { background: #fc3; }
+.result-failure { background: #c00; }
+
+.priorPatterns { color: #ccc; font-size: 1.1em; }
