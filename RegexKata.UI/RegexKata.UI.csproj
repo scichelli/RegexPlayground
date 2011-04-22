@@ -66,8 +66,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\boilerplate.css" />
     <Content Include="Global.asax" />
     <Content Include="css\riddles.css" />
+    <Content Include="images\bg.png" />
     <Content Include="js\modernizr-1.7.min.js" />
     <Content Include="js\yepnope.1.0.1-min.js" />
     <Content Include="Web.config" />

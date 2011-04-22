@@ -1,33 +1,21 @@
 ﻿@model RegexKata.Core.Riddle
 
 @{ ViewBag.Title = "Play"; }
+
 <table class="riddle">
-    @{
-     int i = 0;   
-    }
-    @foreach (var clue in Model.Clues)
-    {
-        <tr>
-            <td>
-                @if (clue.ShouldMatch)
-                {
-                    @:*
-                }
-                else
-                {
-                    @:&nbsp;
-                }
-            </td>
-            <td>@clue.Prompt</td>
-            <td id="@i"></td>
-            @{
-                i++;
-            }
-        </tr>
-    }
-    <tr>
-        <td colspan="3">
-            <input type="text" id="pattern" />
-        </td>
-    </tr>
+	@{ int i = 0; }
+	@foreach (var clue in Model.Clues) {
+		<tr>
+			<td>
+				@Html.Raw(clue.ShouldMatch ? "*" : "&nbsp;")
+			</td>
+			<td>@clue.Prompt</td>
+			<td id="@i"></td>
+			@{ i++; }
+		</tr>
+	}
 </table>
+<form action="" method="post">
+	<label for="pattern"><input id="pattern" name="pattern" placeholder="Type your answer here" type="text" /></label>
+	<button><span class="btn">Check</span></button>
+</form>
