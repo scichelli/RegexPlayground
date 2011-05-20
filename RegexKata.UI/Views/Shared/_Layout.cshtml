@@ -2,37 +2,39 @@
 <html class="no-js" lang="en">
 
 <head>
+
 	<meta charset="utf-8">
 	
-	<title>RegEx Playground|@ViewBag.Title</title>
+	<title>RegEx Riddles | @ViewBag.Title</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
 	<link rel="stylesheet" href="@Url.Content("~/css/boilerplate.css")">
 	<link rel="stylesheet" href="@Url.Content("~/css/riddles.css")">
 	<script src="@Url.Content("~/js/modernizr-1.7.min.js")"></script>
+
 </head>
 
 <body>
 
-	<header class="layout-container">
+	<header>
 
-		<nav>
+		<nav class="box top-box layout-container">
 			<ul>
 				<li><a href="@Url.Action("Index", "Riddle")">Play</a></li>
 				<li><a href="#">Create</a></li>
 			</ul>
 		</nav>
 
-		<h1>Regex Riddles</h1>
+		<h1 class="layout-container">Regex Riddles</h1>
 
 	</header>
 
-	<div id="content" class="layout-container">
+	<div id="content" class="box layout-container">
 		@RenderBody()
 	</div>
 
-	<footer class="layout-container">
+	<footer class="box layout-container">
 		<p>Hand-crafted by <a href="#">@@scichelli</a> and <a href="#">@@timgthomas</a>.</p>
 	</footer>
 
@@ -45,6 +47,10 @@
 			],
 			complete: function () {
 				$(function () {
+					$('.btn.submit').bind('click', function () {
+						$(this).closest('form').trigger('submit');
+					});
+
 					$('form').submit(function () {
 						var form = $(this);
 
@@ -53,7 +59,7 @@
 							type: form.attr('method'),
 							data: form.serialize(),
 							success: function (data) {
-								var container = form.parents('.riddleContainer');
+								var container = form.parents('.riddle-container');
 
 								$('.clueResult', container).removeClass('result-success').removeClass('result-failure');
 

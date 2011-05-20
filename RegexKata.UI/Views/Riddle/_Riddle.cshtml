@@ -1,21 +1,21 @@
 @model RegexKata.Core.Riddle
 
-<div class="riddleContainer">
-	<table class="riddle">
+<div class="riddle-container">
+	<table class="riddle" style="width: 100%">
 		@foreach (var clue in Model.Clues) {
 			<tr>
 				<td class="icon">@Html.Raw(clue.ShouldMatch ? "<span class=\"icon shouldMatch\"></span>" : "&nbsp;")</td>
 				<td>@clue.Prompt</td>
-				<td class="icon"><span class="icon clueResult result-indeterminate" id="@clue.GetHashCode()"></span></td>
+				<td class="icon"><span class="icon clue-result result-indeterminate" id="@clue.GetHashCode()"></span></td>
 			</tr>
 		}
 	</table>
 	<form action="@Url.Action("TestRiddle", "Riddle")" method="post">
 		@Html.HiddenFor(r => r.Id)
 		<label for="pattern"><input id="pattern" name="pattern" placeholder="Type your answer here" type="text" /></label>
-		<button type="submit"><span class="btn">Check</span></button>
-		<button><span class="btn">Next</span></button>
-		<button><span class="btn">Reset</span></button>
+		<span class="btn submit"><span class="icon"></span>Check</span>
+		<span class="btn"><span class="icon"></span>Next</span>
+		<span class="btn"><span class="icon"></span>Reset</span>
 	</form>
 	<ol class="priorPatterns"></ol>
 </div>
