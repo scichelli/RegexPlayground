@@ -5,7 +5,7 @@
 		@foreach (var clue in Model.Clues) {
 			<tr>
 				<td class="icon">@Html.Raw(clue.ShouldMatch ? "<span class=\"icon shouldMatch\"></span>" : "&nbsp;")</td>
-				<td>@clue.Prompt</td>
+				<td><p class="clue">@clue.Prompt</p></td>
 				<td class="icon"><span class="icon clue-result result-indeterminate" id="@clue.GetHashCode()"></span></td>
 			</tr>
 		}

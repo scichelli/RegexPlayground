@@ -30,7 +30,7 @@ input { height: 24px; width: 300px; padding: 0; }
 nav li a { background: #eee; border-radius: 5px; }
 
 td { border: 1px solid #000; }
-td.icon { width: 24px; }
+td.icon { vertical-align: middle; width: 24px; }
 
 .riddle { margin-bottom: 10px; }
 
@@ -46,6 +46,10 @@ label { background: #eee; border-radius: 5px; }
 input { background: transparent; border: 0; }
 
 /* Typography */
+h1 { font-family: 'Cabin Sketch', Arial, Sans-Serif; font-size: 6.0rem; text-align: center; }
+
 nav li a { line-height: 25px; }
 footer p { text-align: center; }
 input { font-size: 1.6rem; }
+
+p.clue { font-size: 1.8rem; line-height: 3.2rem; text-align: center; }

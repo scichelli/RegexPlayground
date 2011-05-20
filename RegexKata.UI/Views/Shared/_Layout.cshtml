@@ -5,9 +5,12 @@
 
 	<meta charset="utf-8">
 	
-	<title>RegEx Riddles | @ViewBag.Title</title>
+	<title>RegEx Playground | @ViewBag.Title</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cabin+Sketch:bold">
 
 	<link rel="stylesheet" href="@Url.Content("~/css/boilerplate.css")">
 	<link rel="stylesheet" href="@Url.Content("~/css/riddles.css")">
@@ -26,7 +29,7 @@
 			</ul>
 		</nav>
 
-		<h1 class="layout-container">Regex Riddles</h1>
+		<h1 class="layout-container">Regex Playground</h1>
 
 	</header>
 
@@ -61,7 +64,7 @@
 							success: function (data) {
 								var container = form.parents('.riddle-container');
 
-								$('.clueResult', container).removeClass('result-success').removeClass('result-failure');
+								$('.clue-result', container).removeClass('result-success').removeClass('result-failure');
 
 								var failures = data.FailedResults;
 								var successes = data.SucceededResults;
