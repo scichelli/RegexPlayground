@@ -29,7 +29,7 @@ input { height: 24px; width: 300px; padding: 0; }
 
 nav li a { background: #eee; border-radius: 5px; }
 
-td { border: 1px solid #000; }
+table tr:nth-child(odd) td { background: #eee; }
 td.icon { vertical-align: middle; width: 24px; }
 
 .riddle { margin-bottom: 10px; }
@@ -52,4 +52,4 @@ nav li a { line-height: 25px; }
 footer p { text-align: center; }
 input { font-size: 1.6rem; }
 
-p.clue { font-size: 1.8rem; line-height: 3.2rem; text-align: center; }
+p.clue { font-size: 2.2rem; line-height: 3.6rem; text-align: center; }
