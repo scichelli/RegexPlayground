@@ -1,0 +1,19 @@
+@model RegexPlayground.Core.Riddle
+
+<div class="riddleContainer">
+	<table class="riddle">
+		@foreach (var clue in Model.Clues) {
+			<tr>
+				<td class="icon">@Html.Raw(clue.ShouldMatch ? "<span class=\"icon shouldMatch\"></span>" : "&nbsp;")</td>
+				<td>@clue.Prompt</td>
+				<td class="icon"><span class="icon clueResult result-indeterminate" id="@clue.GetHashCode()"></span></td>
+			</tr>
+		}
+	</table>
+	<form action="@Url.Action("TestRiddle", "Riddle")" method="post">
+		@Html.HiddenFor(r => r.Id)
+		<label for="pattern"><input id="pattern" name="pattern" placeholder="Type your answer here" type="text" /></label>
+		<button type="submit"><span class="btn">Check</span></button>
+	</form>
+	<ol class="priorPatterns"></ol>
+</div>
