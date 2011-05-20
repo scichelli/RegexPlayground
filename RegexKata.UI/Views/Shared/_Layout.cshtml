@@ -15,18 +15,26 @@
 
 <body>
 
-	<header>
-		<h1>Regex Riddles</h1>
+	<header class="layout-container">
+
 		<nav>
 			<ul>
 				<li><a href="@Url.Action("Index", "Riddle")">Play</a></li>
+				<li><a href="#">Create</a></li>
 			</ul>
 		</nav>
+
+		<h1>Regex Riddles</h1>
+
 	</header>
 
-	<div id="content">
+	<div id="content" class="layout-container">
 		@RenderBody()
 	</div>
+
+	<footer class="layout-container">
+		<p>Hand-crafted by <a href="#">@@scichelli</a> and <a href="#">@@timgthomas</a>.</p>
+	</footer>
 
 	<script src="@Url.Content("~/js/yepnope.1.0.1-min.js")"></script>
 	<script>
